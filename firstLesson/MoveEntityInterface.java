@@ -1,6 +1,6 @@
 package firstLesson;
 
-interface MoveEntityInterface {
+public interface MoveEntityInterface {
     void run(BarrierInterface barrier);
     void jump(BarrierInterface barrier);
 }

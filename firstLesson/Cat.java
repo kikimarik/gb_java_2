@@ -12,19 +12,17 @@ public class Cat implements MoveEntityInterface {
 
     @Override
     public void run(BarrierInterface barrier) {
-        String message;
-        message = barrier.getLength() > this.maxRunDistance
-                ? "The barrier length is greater then cat max run limit"
-                : "Cat successfully run the barrier";
-        System.out.println(message);
+        if (barrier.getLength() > this.maxRunDistance) {
+            throw new OutOfDistanceException("The barrier length is greater then cat max run limit");
+        }
+        System.out.println("Cat successfully run the barrier");
     }
 
     @Override
     public void jump(BarrierInterface barrier) {
-        String message;
-        message = barrier.getHeight() > this.maxJumpDistance
-                ? "The barrier height is greater then cat max jump limit"
-                : "Cat successfully jump the barrier";
-        System.out.println(message);
+        if (barrier.getHeight() > this.maxJumpDistance) {
+            throw new OutOfDistanceException("The barrier height is greater then cat max run limit");
+        }
+        System.out.println("Cat successfully jump the barrier");
     }
 }
