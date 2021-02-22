@@ -2,8 +2,8 @@ package firstLesson;
 
 abstract class Barrier implements BarrierInterface {
 
-    private int height = 0;
-    private int length = 0;
+    protected int height = 0;
+    protected int length = 0;
 
     @Override
     public void setHeight(int height) {
