@@ -1,3 +1,4 @@
+import thirdLesson.ContactMap;
 import thirdLesson.UniqueWordMap;
 
 public class ThirdLesson {
@@ -18,8 +19,16 @@ public class ThirdLesson {
                 "orange"
         };
         UniqueWordMap wordMap = new UniqueWordMap(words);
-        wordMap.printUniqueWords();
+        // wordMap.printUniqueWords();
         wordMap.setWord("tea"); // add tea
         // wordMap.printUniqueWords();
+        ContactMap contactMap = new ContactMap();
+        contactMap.add("+79990990909", "ivanov");
+        contactMap.add("+79990990907", "petrov");
+        contactMap.add("+79990990905", "sidorov");
+        contactMap.add("+79990990903", "naumov");
+        contactMap.add("+79990990908", "ivanov");
+        System.out.println(contactMap.get("ivanov"));
+        System.out.println(contactMap.get("petrov"));
     }
 }
